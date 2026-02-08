@@ -142,7 +142,6 @@ class FPQuantLinear(nn.Module):
         input_gs = self.config.hadamard_group_size
 
         if self.config.transform_init=="wush":
-            # print("Overriding hadamard martrix shape[1].")
             input_gs = self.in_features
 
         # Rotation matrices buffers

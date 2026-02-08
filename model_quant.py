@@ -78,7 +78,6 @@ def export_quantized_model(model, quantized_state_dict, non_quantized_state_dict
     for k, v in model.state_dict().items():
         if not (k.startswith("model.layers") or (k == "lm_head.weight" and tie_word_embeddings)):
             model_state_dict[k] = v.cpu()
-    # print(model_state_dict)
     # Split checkpoint into shards
     current_shard_size = 0
     current_shard = {}

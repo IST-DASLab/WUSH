@@ -34,7 +34,6 @@ def forward_quantize(
     forward_method: str,
 ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
     if dtype == FPQuantDtype.MXFP4:
-        # print(hadamard_matrix.shape)
         if hadamard_matrix.shape[0] != hadamard_matrix.shape[1]:
             assert hadamard_matrix.shape[0] == 32, "Wush method requires hadamard matrix of size 32xN for now"
             qweight, scales, mask = fused_quantize_mx_wush_op(
