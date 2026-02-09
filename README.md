@@ -59,6 +59,8 @@ pip install -e .
 cd ../../
 
 pip install lm_eval==0.4.9
+
+git clone git@github.com:Vahe1994/platinum-benchmarks.git && cd platinum-benchmarks && git checkout local_evals && pip install -e .
 ```
 
 ## How to Run
