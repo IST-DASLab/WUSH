@@ -35,7 +35,7 @@ conda create -n wush python=3.12 ipykernel ipywidgets cmake --yes
 source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate wush
 
-pip install --pre torch==2.11.0.dev20260122+cu128 --index-url https://download.pytorch.org/whl/nightly/cu128
+pip3 install torch==2.10.0 torchvision
 pip install numpy pandas datasets
 
 git clone git@github.com:vahe1994/transformers.git && cd transformers && git checkout wush_tmp && pip install -e . && cd ..
