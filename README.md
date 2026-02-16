@@ -42,11 +42,12 @@ git clone git@github.com:vahe1994/transformers.git && cd transformers && git che
 
 git clone git@github.com:Dao-AILab/fast-hadamard-transform
 cd fast-hadamard-transform
-pip install -e .
+pip install -e . --no-build-isolation
 cd ..
 
 git clone git@github.com/IST-DASLab/qutlass
 cd qutlass
+git submodule update --init --recursive
 # Installing QuTLASS (run from the repository root that contains the submodule)
 mv mma_multistage.h third_party/cutlass/include/cutlass/gemm/threadblock/
 mv mma_tensor_op.h third_party/cutlass/include/cutlass/gemm/warp/
