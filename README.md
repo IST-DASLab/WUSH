@@ -38,7 +38,7 @@ conda activate wush
 pip3 install torch==2.10.0 torchvision
 pip install numpy pandas datasets
 
-git clone git@github.com:vahe1994/transformers.git && cd transformers && git checkout wush_tmp && pip install -e . && cd ..
+git clone git@github.com:vahe1994/transformers.git && cd transformers && pip install -e . && cd ..
 
 git clone git@github.com:Dao-AILab/fast-hadamard-transform
 cd fast-hadamard-transform
